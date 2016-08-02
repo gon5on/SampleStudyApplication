@@ -16,9 +16,8 @@ import java.util.ArrayList;
 import jp.co.e2.baseapplication.R;
 import jp.co.e2.baseapplication.common.AndroidUtils;
 import jp.co.e2.baseapplication.config.Config;
-import jp.co.e2.baseapplication.dialog.AppProgressDialog;
 import jp.co.e2.baseapplication.entity.SampleEntity;
-import jp.co.e2.baseapplication.http.SampleAsyncTask;
+import jp.co.e2.baseapplication.http.SampleHttp;
 
 /**
  * 非同期通信フラグメント
@@ -32,7 +31,6 @@ public class HttpFragment extends Fragment {
     private static final String BUNDLE_RESULT = "bundle_result";
 
     private View mView;
-    private static AppProgressDialog mAppProgressDialog = null;     //画面回転に対応するために仕方なくstatic
 
     /**
      * ファクトリーメソッド
@@ -134,26 +132,12 @@ public class HttpFragment extends Fragment {
      * APIを呼ぶ
      */
     private void callApi(String url) {
-        //プログレスダイアログを表示
-        mAppProgressDialog = AppProgressDialog.getInstance(getString(R.string.connecting));
-        mAppProgressDialog.show(getFragmentManager(), "dialog");
-        mAppProgressDialog.setCancelable(false);
-
         //結果表示を空にしておく
         TextView textViewResult = (TextView) mView.findViewById(R.id.textViewResult);
         textViewResult.setText(null);
 
         //APIに通信する
-        new SampleAsyncTask().execute(url);
-    }
-
-    /**
-     * プログレスダイアログを閉じる
-     */
-    private void closeProgressDialog() {
-        if (mAppProgressDialog != null) {
-            mAppProgressDialog.dismiss();
-        }
+        new SampleHttp().execute(url);
     }
 
     /**
@@ -162,10 +146,7 @@ public class HttpFragment extends Fragment {
      * イベントバスは引数の型を見て、一致する型のコールバックメソッドに処理が戻る
      */
     @Subscribe(threadMode = ThreadMode.MAIN)
-    public void onEvent(SampleAsyncTask.SampleEvent result) {
-        //プログレスダイアログを閉じる
-        closeProgressDialog();
-
+    public void onEvent(SampleHttp.SampleEvent result) {
         //成功の場合、レスポンスを表示
         if (result.isSuccessful()) {
             showResponseData(result.getSampleApiEntity().getData());

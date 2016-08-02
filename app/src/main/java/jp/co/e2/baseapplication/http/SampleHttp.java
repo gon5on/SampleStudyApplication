@@ -20,7 +20,7 @@ import jp.co.e2.baseapplication.entity.SampleApiEntity;
  * ThreadとRunnableを使って実装していますが、AsyncTaskを使っても構いません
  * （EventBusを使って画面再生成に対応していれば）
  */
-public class SampleAsyncTask {
+public class SampleHttp {
     /**
      * 非同期HTTP通信を実行する
      */
