@@ -1,0 +1,40 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:id="@+id/group_main"
+        android:checkableBehavior="single"
+        >
+
+        <item
+            android:id="@+id/menu_view"
+            android:title="@string/menu_view"
+            android:icon="@android:drawable/ic_menu_edit"
+            />
+        <item
+            android:id="@+id/menu_lifecycle"
+            android:title="@string/menu_lifecycle"
+            android:icon="@android:drawable/ic_menu_crop"
+            />
+        <item
+            android:id="@+id/menu_regenerate"
+            android:title="@string/menu_regenerate"
+            android:icon="@android:drawable/ic_menu_day"
+            />
+    </group>
+
+    <group
+        android:id="@+id/group_sub"
+        android:checkableBehavior="single"
+        >
+
+        <item
+            android:id="@+id/menu_http"
+            android:title="@string/menu_http"
+            android:icon="@android:drawable/ic_menu_agenda"
+            />
+        <item
+            android:id="@+id/menu_db"
+            android:title="@string/menu_db"
+            android:icon="@android:drawable/ic_menu_add"
+            />
+    </group>
+</menu>

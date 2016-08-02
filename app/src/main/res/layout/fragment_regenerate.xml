@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/scrollView"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/twoBlock"
+        android:paddingRight="@dimen/twoBlock"
+        android:paddingTop="@dimen/twoBlock"
+        android:paddingBottom="@dimen/twoBlock"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/twoBlock"
+            android:text="@string/regenerateSample"
+            />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/halfBlock"
+            >
+
+            <TextView
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:text="@string/disappearValue"
+                android:layout_weight="1"
+                android:layout_marginRight="@dimen/halfBlock"
+                android:layout_marginEnd="@dimen/halfBlock"
+                />
+
+            <TextView
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:text="@string/notDisappearValue"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/halfBlock"
+                android:layout_marginStart="@dimen/halfBlock"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/threeBlock"
+            >
+
+            <TextView
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView1"
+                android:layout_weight="1"
+                android:textSize="@dimen/fontSizeBig"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                android:layout_weight="1"
+                android:textSize="@dimen/fontSizeBig"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/halfBlock"
+            >
+
+            <TextView
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:text="@string/notReactionRegenerate"
+                android:layout_weight="1"
+                android:layout_marginRight="@dimen/halfBlock"
+                android:layout_marginEnd="@dimen/halfBlock"
+                />
+
+            <TextView
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:text="@string/reactionRegenerate"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/halfBlock"
+                android:layout_marginStart="@dimen/halfBlock"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/threeBlock"
+            >
+
+            <Button
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:text="@string/notReaction"
+                android:id="@+id/button1"
+                android:layout_weight="1"
+                android:layout_marginRight="@dimen/halfBlock"
+                android:layout_marginEnd="@dimen/halfBlock"
+                />
+
+            <Button
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:text="@string/reaction"
+                android:id="@+id/button2"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/halfBlock"
+                android:layout_marginStart="@dimen/halfBlock"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/halfBlock"
+            >
+
+            <TextView
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:text="@string/disappearRegenerateDialog"
+                android:layout_weight="1"
+                android:layout_marginRight="@dimen/halfBlock"
+                android:layout_marginEnd="@dimen/halfBlock"
+                />
+
+            <TextView
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:text="@string/notDisappearRegenerateDialog"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/halfBlock"
+                android:layout_marginStart="@dimen/halfBlock"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/threeBlock"
+            >
+
+            <Button
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:text="@string/disappearDialog"
+                android:id="@+id/button3"
+                android:layout_weight="1"
+                android:layout_marginRight="@dimen/halfBlock"
+                android:layout_marginEnd="@dimen/halfBlock"
+                />
+
+            <Button
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:text="@string/notDisappearDialog"
+                android:id="@+id/button4"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/halfBlock"
+                android:layout_marginStart="@dimen/halfBlock"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/halfBlock"
+            >
+
+            <TextView
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:text="@string/unCatchCallbackRegenerate"
+                android:layout_weight="1"
+                android:layout_marginRight="@dimen/halfBlock"
+                android:layout_marginEnd="@dimen/halfBlock"
+                />
+
+            <TextView
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:text="@string/catchCallbackRegenerate"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/halfBlock"
+                android:layout_marginStart="@dimen/halfBlock"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/threeBlock"
+            >
+
+            <Button
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:text="@string/unCatchCallback"
+                android:id="@+id/button5"
+                android:layout_weight="1"
+                android:layout_marginRight="@dimen/halfBlock"
+                android:layout_marginEnd="@dimen/halfBlock"
+                />
+
+            <Button
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:text="@string/catchCallback"
+                android:id="@+id/button6"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/halfBlock"
+                android:layout_marginStart="@dimen/halfBlock"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/threeBlock"
+            >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginRight="@dimen/halfBlock"
+                android:layout_marginEnd="@dimen/halfBlock"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/notKeepStateRegenerate"
+                    android:layout_marginBottom="@dimen/halfBlock"
+                    />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/notKeepState"
+                    android:id="@+id/button7"
+                    android:layout_gravity="bottom"
+                    android:enabled="false"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/halfBlock"
+                android:layout_marginStart="@dimen/halfBlock"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/keepStateRegenerate"
+                    android:layout_marginBottom="@dimen/halfBlock"
+                    />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/keepState"
+                    android:id="@+id/button8"
+                    android:layout_gravity="bottom"
+                    android:enabled="false"
+                    />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                >
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/checkBoxEnable"
+                    android:checked="false"
+                    android:layout_gravity="bottom"
+                    />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/threeBlock"
+            >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginRight="@dimen/halfBlock"
+                android:layout_marginEnd="@dimen/halfBlock"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/notKeepMemberValue"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView3"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/fontSizeBig"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/halfBlock"
+                android:layout_marginStart="@dimen/halfBlock"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/keepMemberValue"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textView4"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/fontSizeBig"
+                    />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                >
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/plusOne"
+                    android:id="@+id/buttonPlusOne"
+                    android:layout_gravity="bottom"
+                    />
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/halfBlock"
+            >
+
+            <TextView
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:text="@string/useAsyncTask"
+                android:layout_weight="1"
+                android:layout_marginRight="@dimen/halfBlock"
+                android:layout_marginEnd="@dimen/halfBlock"
+                />
+
+            <TextView
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:text="@string/useEventBus"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/halfBlock"
+                android:layout_marginStart="@dimen/halfBlock"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/halfBlock"
+            >
+
+            <Button
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:text="@string/notConsiderRegenerate"
+                android:id="@+id/button9"
+                android:layout_weight="1"
+                android:layout_marginRight="@dimen/halfBlock"
+                android:layout_marginEnd="@dimen/halfBlock"
+                />
+
+            <Button
+                android:layout_width="@dimen/zero"
+                android:layout_height="wrap_content"
+                android:id="@+id/button10"
+                android:layout_weight="1"
+                android:layout_marginLeft="@dimen/halfBlock"
+                android:layout_marginStart="@dimen/halfBlock"
+                android:text="@string/considerRegenerate"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

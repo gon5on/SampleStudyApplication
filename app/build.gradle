@@ -1,0 +1,71 @@
+apply plugin: 'com.android.application'
+
+def VERSION_CODE = 1
+def VERSION_NAME = "1.00.00"
+def APPLICATION_ID = "jp.co.e2.sampleStudyApplication"
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.0"
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 24
+        versionCode VERSION_CODE
+    }
+
+    buildTypes {
+        debug {
+            //デバッグモードON
+            debuggable true
+            //apk最適化
+            zipAlignEnabled true
+            //アプリケーションIDのサフィックス
+            applicationIdSuffix ".debug"
+            // Version名につけるサフィックス
+            versionNameSuffix '-debug'
+        }
+        release {
+            //デバッグモードOFF
+            debuggable false
+            //apk最適化
+            zipAlignEnabled true
+            //難読化
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-project.txt'
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+    }
+
+    productFlavors {
+        develop {
+            applicationId "${APPLICATION_ID}.develop"
+            versionName "${VERSION_NAME}-develop"
+        }
+        staging {
+            applicationId "${APPLICATION_ID}.staging"
+            versionName "${VERSION_NAME}-staging"
+        }
+        production {
+            applicationId APPLICATION_ID
+            versionName VERSION_NAME
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: '*.jar')
+    compile 'com.android.support:support-v4:24.0.0'
+    compile 'com.android.support:appcompat-v7:24.0.0'
+    compile 'com.android.support:design:24.0.0'
+    compile 'com.google.android.gms:play-services-analytics:9.0.2'
+    compile 'com.google.code.gson:gson:2.4'
+    compile 'com.squareup.okhttp:okhttp:2.7.0'
+    compile 'com.squareup.okhttp:logging-interceptor:2.7.0'
+    compile 'org.greenrobot:eventbus:3.0.0'
+}
