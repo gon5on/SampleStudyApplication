@@ -57,7 +57,7 @@ public class LifecycleActivity extends BaseActivity {
         }
 
         LogUtils.d("Activity.onCreate()");
-        LogUtils.d("In Activity.onCreate() " + ((savedInstanceState == null) ? "= null" : "!= null"));
+        LogUtils.d("In Activity.onCreate() savedInstanceState " + ((savedInstanceState == null) ? "= null" : "!= null"));
     }
 
     /**
@@ -195,6 +195,7 @@ public class LifecycleActivity extends BaseActivity {
             super.onActivityCreated(savedInstanceState);
 
             LogUtils.d("Fragment.onActivityCreated()");
+            LogUtils.d("In Fragment.onActivityCreated() savedInstanceState " + ((savedInstanceState == null) ? "= null" : "!= null"));
         }
 
         /**

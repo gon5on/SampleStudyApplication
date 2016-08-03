@@ -44,11 +44,15 @@ android {
 
     productFlavors {
         develop {
+            //アプリケーションIDのサフィックス
             applicationId "${APPLICATION_ID}.develop"
+            // Version名につけるサフィックス
             versionName "${VERSION_NAME}-develop"
         }
         staging {
+            //アプリケーションIDのサフィックス
             applicationId "${APPLICATION_ID}.staging"
+            // Version名につけるサフィックス
             versionName "${VERSION_NAME}-staging"
         }
         production {
