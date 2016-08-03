@@ -10,13 +10,13 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
 import jp.co.e2.baseapplication.R;
-import jp.co.e2.baseapplication.common.AndroidUtils;
 import jp.co.e2.baseapplication.dialog.NoReSetCallBackListenerDialog;
 import jp.co.e2.baseapplication.dialog.ReSetCallBackListenerDialog;
 import jp.co.e2.baseapplication.dialog.UseDialogFragmentDialog;
@@ -82,7 +82,7 @@ public class RegenerateFragment extends Fragment
             mView.findViewById(R.id.button1).setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    AndroidUtils.showToastS(getActivity(), getString(R.string.pushLeftButton));
+                    Toast.makeText(getContext(), getString(R.string.pushLeftButton), Toast.LENGTH_SHORT).show();
                 }
             });
         }
@@ -91,7 +91,7 @@ public class RegenerateFragment extends Fragment
         mView.findViewById(R.id.button2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AndroidUtils.showToastS(getActivity(), getString(R.string.pushRightButton));
+                Toast.makeText(getContext(), getString(R.string.pushRightButton), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -296,7 +296,7 @@ public class RegenerateFragment extends Fragment
      */
     @Override
     public void onClickNoReSetCallBackListenerDialogDialogOk() {
-        AndroidUtils.showToastS(getActivity(), getString(R.string.doneCallback));
+        Toast.makeText(getContext(), getString(R.string.doneCallback), Toast.LENGTH_SHORT).show();
     }
 
     /**
@@ -304,7 +304,7 @@ public class RegenerateFragment extends Fragment
      */
     @Override
     public void onClickReSetCallBackListenerDialogDialogOk() {
-        AndroidUtils.showToastS(getActivity(), getString(R.string.doneCallback));
+        Toast.makeText(getContext(), getString(R.string.doneCallback), Toast.LENGTH_SHORT).show();
     }
 
     /**
@@ -312,7 +312,7 @@ public class RegenerateFragment extends Fragment
      */
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEvent(Boolean result) {
-        AndroidUtils.showToastS(getContext(), getString(R.string.callBackEventBus));
+        Toast.makeText(getContext(), getString(R.string.callBackEventBus), Toast.LENGTH_SHORT).show();
     }
 
     /**
@@ -350,7 +350,7 @@ public class RegenerateFragment extends Fragment
         @Override
         protected void onPostExecute(Boolean result) {
             //画面再生性をすると、getContext()とかgetActivity()がnullになるので、例外が発生する
-            AndroidUtils.showToastS(getContext(), getString(R.string.finishAsyncTask));
+            Toast.makeText(getContext(), getString(R.string.finishAsyncTask), Toast.LENGTH_SHORT).show();
         }
     }
 

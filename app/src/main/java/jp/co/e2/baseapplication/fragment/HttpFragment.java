@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
@@ -14,7 +15,6 @@ import org.greenrobot.eventbus.ThreadMode;
 import java.util.ArrayList;
 
 import jp.co.e2.baseapplication.R;
-import jp.co.e2.baseapplication.common.AndroidUtils;
 import jp.co.e2.baseapplication.config.Config;
 import jp.co.e2.baseapplication.entity.SampleEntity;
 import jp.co.e2.baseapplication.http.SampleHttp;
@@ -153,7 +153,7 @@ public class HttpFragment extends Fragment {
         }
         //エラーの場合
         else {
-            AndroidUtils.showToastS(getActivity(), getString(R.string.errorMsgSomethingError));
+            Toast.makeText(getContext(), getString(R.string.errorMsgSomethingError), Toast.LENGTH_SHORT).show();
         }
     }
 

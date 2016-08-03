@@ -2,16 +2,19 @@ package jp.co.e2.baseapplication.debug;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.LinkedHashMap;
+import java.util.Locale;
 
 import android.app.FragmentManager;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.os.Build;
 import android.preference.PreferenceManager;
 
-import jp.co.e2.baseapplication.common.AndroidUtils;
-import jp.co.e2.baseapplication.common.DateHelper;
 import jp.co.e2.baseapplication.config.EnvConfig;
 
 /**
@@ -198,16 +201,30 @@ public class DebugHelper {
      * @return String
      */
     private static String createExDebugText(Context context, LinkedHashMap<String, String> data) {
-        String date = new DateHelper().format(DateHelper.FMT_DATETIME);
+        Calendar cal =  Calendar.getInstance();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault());
+        String date = sdf.format(cal.getTime());
+
+        String versionName = null;
+        Integer versionCode = null;
+
+        PackageManager packageManager = context.getPackageManager();
+        try {
+            PackageInfo packageInfo = packageManager.getPackageInfo(context.getPackageName(), PackageManager.GET_ACTIVITIES);
+            versionName = packageInfo.versionName;
+            versionCode = packageInfo.versionCode;
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
 
         String text = "---------------------------------------\n";
         text += "date = " + date + "\n";
         text += "---------------------------------------\n";
-        text += "package = " + context.getPackageName() + "\n";
+        text += "application ID = " + context.getPackageName() + "\n";
         text += "---------------------------------------\n";
-        text += "app ver = " + AndroidUtils.getVerName(context) + "\n";
+        text += "app ver = " + versionName + "\n";
         text += "---------------------------------------\n";
-        text += "app code = " + AndroidUtils.getVerCode(context) + "\n";
+        text += "app code = " + versionCode+ "\n";
         text += "---------------------------------------\n";
         text += "os ver = " + Build.VERSION.RELEASE + "\n";
         text += "---------------------------------------\n";

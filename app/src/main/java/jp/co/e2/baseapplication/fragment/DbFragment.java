@@ -7,11 +7,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
 import jp.co.e2.baseapplication.R;
-import jp.co.e2.baseapplication.common.AndroidUtils;
 import jp.co.e2.baseapplication.entity.SampleEntity;
 import jp.co.e2.baseapplication.model.BaseSQLiteOpenHelper;
 import jp.co.e2.baseapplication.model.SampleDao;
@@ -58,7 +58,7 @@ public class DbFragment extends Fragment {
                 showSampleData();
             } catch (Exception e) {
                 e.printStackTrace();
-                AndroidUtils.showToastS(getActivity(), getString(R.string.errorMsgSomethingError));
+                Toast.makeText(getContext(), getString(R.string.errorMsgSomethingError), Toast.LENGTH_SHORT).show();
             }
         }
 

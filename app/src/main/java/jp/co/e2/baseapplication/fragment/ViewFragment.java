@@ -13,7 +13,6 @@ import android.widget.Toast;
 
 import jp.co.e2.baseapplication.R;
 import jp.co.e2.baseapplication.activity.SubActivity;
-import jp.co.e2.baseapplication.common.AndroidUtils;
 import jp.co.e2.baseapplication.dialog.BottomSheetDialog;
 import jp.co.e2.baseapplication.dialog.SampleDialog;
 
@@ -139,7 +138,7 @@ public class ViewFragment extends Fragment implements SampleDialog.CallbackListe
      */
     @Override
     public void onClickSampleDialogOk(int tag) {
-        AndroidUtils.showToastS(getActivity(), getString(R.string.ok));
+        Toast.makeText(getContext(), getString(R.string.ok), Toast.LENGTH_SHORT).show();
     }
 
     /**
@@ -147,6 +146,6 @@ public class ViewFragment extends Fragment implements SampleDialog.CallbackListe
      */
     @Override
     public void onClickSampleDialogCancel(int tag) {
-        AndroidUtils.showToastS(getActivity(), getString(R.string.cancel));
+        Toast.makeText(getContext(), getString(R.string.cancel), Toast.LENGTH_SHORT).show();
     }
 }
